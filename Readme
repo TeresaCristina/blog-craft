@@ -1,0 +1,56 @@
+Blog MERN stack
+
+M - MongoDB is a NoSQL document-based database. Databases are used to persist any data the users will need. In this guide, we are going to use MongoDB Atlas, MongoDB's managed database solution.
+E - Express.js is a flexible and minimalist web framework for building Node.js applications
+R - React.js is a front-end frameowrk that lets you build interactive UIs.
+N - Node.js is an asynchronous event-driven JavaScript runtime designed to build scalable network applications.
+
+CReated following the tutorial: 
+
+https://www.koyeb.com/tutorials/get-started-with-the-mern-stack-build-a-blog-with-mongodb-atlas
+
+
+Run npx express-generator (generates app.js, execute express-generator without installing the package)
+
+npm install nodemon --save-dev  (reload the server)
+npm install cors (allow cross-origin resource sharing)
+npm install mongoose (comunicacao com MongoDb for node)
+
+create folder client
+
+insided client:
+
+run npx create-react-app . (creates the react app)
+
+npm install axios (make API calls) react-router-dom (client routing) react-hook-form (submit form data)
+
+npm install bootstrap@5.1.3 react-bootstrap (css)
+
+rm package-lock.json from root directory
+
+Create database e get connection string
+
+Create on root:
+
+mkdir models
+
+Create schema for posts
+
+Create CRUD endpoints for posts
+
+Test endpoints with PostMan
+
+{
+    "author": "teresa costa",
+    "title": "My first post",
+    "content": "Something something something",
+    "tags": [
+        "blog",
+        "new",
+        "test"
+    ]
+}
+
+
+CLIENT
+
