@@ -56,3 +56,17 @@ CLIENT
 
 https://mdbootstrap.com/docs/react/extended/login-form/
 
+
+
+Use MDB:
+
+npm i mdb-react-ui-kit
+npm i @fortawesome/fontawesome-free
+
+On index.js
+
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+       

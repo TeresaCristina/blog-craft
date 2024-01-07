@@ -2,62 +2,82 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Container from 'react-bootstrap/Container'
 import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import { Route, Routes } from 'react-router-dom'
-
+import Image from 'react-bootstrap/Image'
 import Create from './pages/create'
 import Edit from './pages/edit'
-// We are going to implement each one of these "pages" in the last section
 import Home from './pages/home'
 import Post from './pages/post'
+import Login from './pages/login'
+
+import {
+  MDBFooter,
+  MDBContainer,
+  MDBCol,
+  MDBRow,
+  MDBInput,
+  MDBBtn,
+  MDBIcon
+} from 'mdb-react-ui-kit';
 
 function App() {
   return (
     <>
- 
-
-
-
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
       <Container>
-      <Navbar.Brand href="/">My Blog</Navbar.Brand>
+     
+        <Image
+          src="avatar.jpeg"
+          width="50"
+          style={{ borderRadius: '50%' }}
+          className="d-block img-fluid mx-auto"
+        />
+    
+      <Navbar.Brand href="/">Itch To Stitch by Teresa</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="/posts/new">New</Nav.Link>
-            <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
+            <Nav.Link href="/posts">All Posts</Nav.Link>           
+          </Nav>        
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-
-
-
       <Routes>
         <Route path="/" element={<Home />} />
-        
+       
+        <Route path="/login" element={<Login />} />
         <Route path="/posts/:id" element={<Post />} />
         <Route path="/posts/new" element={<Create />} />
         <Route path="/posts/:id/edit" element={<Edit />} />
       </Routes>
+      <MDBFooter bgColor='light' className='text-center text-lg-left'>
+      <MDBContainer className='p-4 pb-0'>
+        <form action=''>
+          
+          <MDBRow>
+            <MDBCol size='auto' className='mb-4 mb-md-0'>
+              <p className='pt-2'>
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </MDBCol>
+            <MDBCol md='5' size='12' className='mb-4 mb-md-0'>
+              <MDBInput type='text' id='form5Example2' label='Email address' />
+            </MDBCol>
+            <MDBCol size='auto' className='mb-4 mb-md-0'>
+              <MDBBtn>Subscribe</MDBBtn>
+            </MDBCol>
+          </MDBRow>
+
+
+        </form>
+      </MDBContainer>
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        &copy; {new Date().getFullYear()} Copyright:{' '}
+        <a className='text-dark' href='https://mdbootstrap.com/'>
+          MDBootstrap.com
+        </a>
+      </div>
+    </MDBFooter>
     </>
   )
 }
-
 export default App

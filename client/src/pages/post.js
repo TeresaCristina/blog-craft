@@ -33,14 +33,7 @@ const Post = () => {
           <span>{tag} </span>
         ))}
         <div className="h4 mt-5">{post.content}</div>
-        <div className="text-secondary mb-5">- {post.author}</div>
         <div className="mb-5">
-          <Link variant="primary" className=" btn btn-primary m-2" to={`/posts/${postId}/edit`}>
-            Edit
-          </Link>
-          <Button variant="danger" onClick={deletePost}>
-            Delete
-          </Button>
         </div>
         <Link to="/" style={{ textDecoration: 'none' }}>
           &#8592; Back to Home
