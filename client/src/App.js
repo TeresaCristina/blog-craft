@@ -23,60 +23,44 @@ function App() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
-      <Container>
-     
-        <Image
-          src="avatar.jpeg"
-          width="50"
-          style={{ borderRadius: '50%' }}
-          className="d-block img-fluid mx-auto"
-        />
-    
-      <Navbar.Brand href="/">Itch To Stitch by Teresa</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/posts">All Posts</Nav.Link>           
-          </Nav>        
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <Container>
+
+
+
+          <Navbar.Brand href="/">
+
+
+            <Image
+              src="avatar.jpeg"
+              width="50"
+              style={{ borderRadius: '50%' }}
+              className="d-block img-fluid mx-auto"
+            />
+            &nbsp; Itch To Stitch by Teresa</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/login">All Posts</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-       
         <Route path="/login" element={<Login />} />
         <Route path="/posts/:id" element={<Post />} />
         <Route path="/posts/new" element={<Create />} />
         <Route path="/posts/:id/edit" element={<Edit />} />
       </Routes>
       <MDBFooter bgColor='light' className='text-center text-lg-left'>
-      <MDBContainer className='p-4 pb-0'>
-        <form action=''>
-          
-          <MDBRow>
-            <MDBCol size='auto' className='mb-4 mb-md-0'>
-              <p className='pt-2'>
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </MDBCol>
-            <MDBCol md='5' size='12' className='mb-4 mb-md-0'>
-              <MDBInput type='text' id='form5Example2' label='Email address' />
-            </MDBCol>
-            <MDBCol size='auto' className='mb-4 mb-md-0'>
-              <MDBBtn>Subscribe</MDBBtn>
-            </MDBCol>
-          </MDBRow>
-
-
-        </form>
-      </MDBContainer>
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-dark' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
-      </div>
-    </MDBFooter>
+   
+        <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          &copy; {new Date().getFullYear()} Copyright:{' '}
+          <a className='text-dark' href='https://mdbootstrap.com/'>
+            MDBootstrap.com
+          </a>
+        </div>
+      </MDBFooter>
     </>
   )
 }
